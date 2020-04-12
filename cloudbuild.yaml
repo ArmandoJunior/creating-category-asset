@@ -10,3 +10,11 @@ steps:
     -   id: "Rodando composer install"
         name: 'gcr.io/cloud-builders/docker'
         args: ['exec', '-t', 'micro-videos-app', 'composer', 'install']
+
+    -   id: "Copiando .env"
+        name: 'gcr.io/cloud-builders/docker'
+        args: ['exec', '-t', 'micro-videos-app', 'cp','.env.example', '.env']
+
+    -   id: "Rodando Key:generate"
+        name: 'gcr.io/cloud-builders/docker'
+        args: ['exec', '-t', 'micro-videos-app', 'php','/var/www/artisan', 'key:generate']
