@@ -16,3 +16,4 @@ yarn-error.log
 /.env-tinker
 /tinker.php
 /.docker/
+/.env.testing

@@ -2,11 +2,13 @@
 
 namespace Tests\Feature;
 
+use App\Models\Category;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic test example.
      *
@@ -14,8 +16,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        Category::all();
         $response = $this->get('/');
 
         $response->assertStatus(200);
     }
+
 }
