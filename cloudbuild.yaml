@@ -15,6 +15,10 @@ steps:
         name: 'gcr.io/cloud-builders/docker'
         args: ['exec', '-t', 'micro-videos-app', 'cp','.env.exampleci', '.env']
 
+    -   id: "Copiando .env.testing"
+        name: 'gcr.io/cloud-builders/docker'
+        args: ['exec', '-t', 'micro-videos-app', 'cp','.env.example.testing', '.env.testing']
+
     -   id: "Rodando Key:generate"
         name: 'gcr.io/cloud-builders/docker'
         args: ['exec', '-t', 'micro-videos-app', 'php','/var/www/artisan', 'key:generate']
