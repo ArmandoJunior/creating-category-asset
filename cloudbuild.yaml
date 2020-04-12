@@ -6,15 +6,3 @@ steps:
     -   id: "Rodando docker-ps"
         name: 'gcr.io/cloud-builders/docker'
         args: ['ps']
-
-    -   id: "Rodando docker-ps"
-        name: 'gcr.io/cloud-builders/docker'
-        args: ['ps']
-
-    -   id: "Rodando docker-ps"
-        name: 'gcr.io/cloud-builders/docker'
-        args: ['ps']
-
-    -   id: "Rodando docker-ps"
-        name: 'gcr.io/cloud-builders/docker'
-        args: ['ps']
