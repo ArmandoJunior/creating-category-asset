@@ -249,7 +249,7 @@
       <workItem from="1586525081454" duration="4674000" />
       <workItem from="1586531467966" duration="391000" />
       <workItem from="1586531869964" duration="33397000" />
-      <workItem from="1586646532501" duration="27860000" />
+      <workItem from="1586646532501" duration="28386000" />
     </task>
     <task id="LOCAL-00001" summary="Tarefa 01, criando Categoria e Gênero para oprojeto de videos">
       <created>1586613175627</created>
@@ -279,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586726644135</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Incluindo step - docker ps">
+      <created>1586730481236</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586730481236</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Incluindo step - docker ps (errata)">
+      <created>1586730565737</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586730565737</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +304,9 @@
     <MESSAGE value="add on ignore" />
     <MESSAGE value="Finalizando módulo testes com HTTP" />
     <MESSAGE value="subindo  cloudbuild.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="subindo  cloudbuild.yaml" />
+    <MESSAGE value="Incluindo step - docker ps" />
+    <MESSAGE value="Incluindo step - docker ps (errata)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Incluindo step - docker ps (errata)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="339" width="824" height="684" key="#CLI_Interpreters" timestamp="1586652691522">
@@ -357,10 +373,10 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="713" y="400" width="474" height="248" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586655568122" />
-    <state x="525" y="100" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586730481170">
+    <state x="525" y="100" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586730565690">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="525" y="100" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586730481170" />
+    <state x="525" y="100" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586730565690" />
     <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586729154999">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
@@ -389,10 +405,10 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="449" y="159" key="SettingsEditor/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586652906067" />
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586730501876">
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586730574046">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586730501876" />
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586730574046" />
     <state x="616" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1586646534972">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
