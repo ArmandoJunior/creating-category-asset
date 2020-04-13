@@ -42,7 +42,7 @@ class CategoryTest extends TestCase
 
     public function testIncrementing()
     {
-        $this->assertFalse($this->category->incrementing);
+        $this->assertFalse($this->category->getIncrementing());
     }
 
     public function testIfUseTraits()
