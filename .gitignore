@@ -16,3 +16,4 @@ yarn-error.log
 /tinker.php
 /.docker/
 /.env.testing
+/.idea/*
