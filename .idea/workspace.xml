@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63f6edb4-cc4c-4299-81f5-74dd8f0a7e78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.docker/mysql/initdb.sql" afterDir="false" />
+    <list default="true" id="63f6edb4-cc4c-4299-81f5-74dd8f0a7e78" name="Default Changelist" comment="Confugurando CI ajuste 2 (retirando .mysql/initdb do gitignore)">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,13 @@
         <option value="Armando Junior &lt;armando.ads@icloud.com&gt;" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="46555f83-15b9-4042-a202-d2b09ce6d39d" />
@@ -154,6 +161,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1aLqArDmPS30Giqd5JR45Y2w88P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -249,7 +257,7 @@
       <workItem from="1586525081454" duration="4674000" />
       <workItem from="1586531467966" duration="391000" />
       <workItem from="1586531869964" duration="33397000" />
-      <workItem from="1586646532501" duration="33604000" />
+      <workItem from="1586646532501" duration="35115000" />
     </task>
     <task id="LOCAL-00001" summary="Tarefa 01, criando Categoria e Gênero para oprojeto de videos">
       <created>1586613175627</created>
@@ -377,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586736294954</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Confugurando CI ajuste 2 (retirando .mysql/initdb do gitignore)">
+      <created>1586736482515</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586736482515</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +417,8 @@
     <MESSAGE value="Confugurando CI" />
     <MESSAGE value="Confugurando CI ajuste 1" />
     <MESSAGE value="Confugurando CI ajuste 2 (retirando .docker do gitignore)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Confugurando CI ajuste 2 (retirando .docker do gitignore)" />
+    <MESSAGE value="Confugurando CI ajuste 2 (retirando .mysql/initdb do gitignore)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Confugurando CI ajuste 2 (retirando .mysql/initdb do gitignore)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="339" width="824" height="684" key="#CLI_Interpreters" timestamp="1586652691522">
@@ -469,30 +485,34 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="713" y="400" width="474" height="248" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586655568122" />
-    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586736294899">
+    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586788754347">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586736294899" />
+    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586788754347" />
     <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586729154999">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586729154999" />
-    <state width="1874" height="298" key="GridCell.Tab.0.bottom" timestamp="1586734836030">
-      <screen x="0" y="27" width="1920" height="996" />
+    <state width="1394" height="298" key="GridCell.Tab.0.bottom" timestamp="1586738761677">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state width="1874" height="298" key="GridCell.Tab.0.bottom/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586734836030" />
-    <state width="1874" height="298" key="GridCell.Tab.0.center" timestamp="1586734836030">
-      <screen x="0" y="27" width="1920" height="996" />
+    <state width="1394" height="298" key="GridCell.Tab.0.bottom/0.27.1920.996/1920.180.1440.900@1920.180.1440.900" timestamp="1586738761677" />
+    <state width="1394" height="298" key="GridCell.Tab.0.center" timestamp="1586738761677">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state width="1874" height="298" key="GridCell.Tab.0.center/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586734836030" />
-    <state width="1874" height="298" key="GridCell.Tab.0.left" timestamp="1586734836030">
-      <screen x="0" y="27" width="1920" height="996" />
+    <state width="1394" height="298" key="GridCell.Tab.0.center/0.27.1920.996/1920.180.1440.900@1920.180.1440.900" timestamp="1586738761677" />
+    <state width="1394" height="298" key="GridCell.Tab.0.left" timestamp="1586738761677">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state width="1874" height="298" key="GridCell.Tab.0.left/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586734836030" />
-    <state width="1874" height="298" key="GridCell.Tab.0.right" timestamp="1586734836030">
-      <screen x="0" y="27" width="1920" height="996" />
+    <state width="1394" height="298" key="GridCell.Tab.0.left/0.27.1920.996/1920.180.1440.900@1920.180.1440.900" timestamp="1586738761677" />
+    <state width="1394" height="298" key="GridCell.Tab.0.right" timestamp="1586738761677">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state width="1874" height="298" key="GridCell.Tab.0.right/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586734836030" />
+    <state width="1394" height="298" key="GridCell.Tab.0.right/0.27.1920.996/1920.180.1440.900@1920.180.1440.900" timestamp="1586738761677" />
     <state x="662" y="337" width="585" height="373" key="NewPhpClassDialog" timestamp="1586624255441">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
@@ -501,14 +521,18 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="449" y="159" key="SettingsEditor/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586652906067" />
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586736370327">
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586789073148">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586736370327" />
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586789073148" />
     <state x="616" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1586646534972">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="616" y="351" key="com.intellij.ide.util.TipDialog/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586646534972" />
+    <state x="728" y="444" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586788904647">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="728" y="444" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586788904647" />
     <state x="634" y="163" width="1006" height="722" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1586616059026">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
@@ -517,6 +541,10 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="605" y="263" width="709" height="522" key="find.popup/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586735091112" />
+    <state x="571" y="317" width="767" height="413" key="git4idea.merge.GitPullDialog" timestamp="1586788963824">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="571" y="317" width="767" height="413" key="git4idea.merge.GitPullDialog/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586788963824" />
     <state x="685" y="416" width="540" height="216" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586618814494">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
