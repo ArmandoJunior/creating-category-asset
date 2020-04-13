@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63f6edb4-cc4c-4299-81f5-74dd8f0a7e78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +255,7 @@
       <workItem from="1586525081454" duration="4674000" />
       <workItem from="1586531467966" duration="391000" />
       <workItem from="1586531869964" duration="33397000" />
-      <workItem from="1586646532501" duration="35813000" />
+      <workItem from="1586646532501" duration="36086000" />
     </task>
     <task id="LOCAL-00001" summary="Tarefa 01, criando Categoria e Gênero para oprojeto de videos">
       <created>1586613175627</created>
@@ -398,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586789149856</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix in the phpunit path">
+      <created>1586789714440</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586789714440</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +431,8 @@
     <MESSAGE value="Confugurando CI ajuste 2 (retirando .docker do gitignore)" />
     <MESSAGE value="Confugurando CI ajuste 2 (retirando .mysql/initdb do gitignore)" />
     <MESSAGE value="first commit in develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit in develop" />
+    <MESSAGE value="fix in the phpunit path" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix in the phpunit path" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="339" width="824" height="684" key="#CLI_Interpreters" timestamp="1586652691522">
@@ -492,10 +499,10 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="713" y="400" width="474" height="248" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586655568122" />
-    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586789149802">
+    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2" timestamp="1586789714354">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586789149802" />
+    <state x="819" y="172" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586789714354" />
     <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586729154999">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
@@ -528,10 +535,10 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="449" y="159" key="SettingsEditor/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586652906067" />
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586789173203">
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586789876138">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586789173203" />
+    <state x="555" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.996/1920.180.1440.900@0.27.1920.996" timestamp="1586789876138" />
     <state x="616" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1586646534972">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
