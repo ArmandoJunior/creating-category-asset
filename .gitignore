@@ -17,3 +17,4 @@ yarn-error.log
 /.docker/
 /.env.testing
 /.idea/*
+/.idea
