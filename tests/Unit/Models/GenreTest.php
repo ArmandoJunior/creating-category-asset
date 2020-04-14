@@ -23,6 +23,12 @@ class GenreTest extends TestCase
         $this->assertEquals($fillable, $this->genre->getFillable());
     }
 
+    public function testFillableAttributeTwo()
+    {
+        $fillable = ['name', 'is_active'];
+        $this->assertEquals($fillable, $this->genre->getFillable());
+    }
+
     public function testDatesAttribute()
     {
         $dates = ['deleted_at', 'created_at', 'updated_at'];
