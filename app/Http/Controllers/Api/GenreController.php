@@ -24,13 +24,12 @@ class GenreController extends Controller
 
     public function store(Request $request)
     {
-        try {
-            $this->validate($request, $this->rules);
-        } catch (ValidationException $e) {
-            return Response()->noContent();
-        }
+        $this->validate($request, $this->rules);
 
-        return Genre::create($request->all());
+        $genre = Genre::query()->create($request->all());
+        $genre->refresh();
+
+        return $genre;
     }
 
     public function show(Genre $genre)

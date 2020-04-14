@@ -5,18 +5,12 @@ namespace Tests\Feature\Models;
 use App\Models\Category;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use mysql_xdevapi\DocResult;
 use Tests\TestCase;
 
 class CategoryTest extends TestCase
 {
     use RefreshDatabase;
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+
     public function testList()
     {
         factory(Category::class, 10)->create();
@@ -37,7 +31,8 @@ class CategoryTest extends TestCase
 
     public function testCreate()
     {
-        $category = Category::create([
+        /** @var Category $category */
+        $category = Category::query()->create([
             'name'  => 'test1'
         ]);
 
@@ -49,20 +44,20 @@ class CategoryTest extends TestCase
         $this->assertNull($category->description);
         $this->assertTrue($category->is_active);
 
-        $category = Category::create(['name'  => 'test1', 'description'  => null]);
+        $category = Category::query()->create(['name'  => 'test1', 'description'  => null]);
         $this->assertNull($category->description);
 
-        $category = Category::create(['name'  => 'test1', 'description'  => 'test description']);
+        $category = Category::query()->create(['name'  => 'test1', 'description'  => 'test description']);
         $this->assertEquals('test description', $category->description);
 
-        $category = Category::create(['name'  => 'test1', 'is_active'  => false]);
+        $category = Category::query()->create(['name'  => 'test1', 'is_active'  => false]);
         $this->assertFalse($category->is_active);
 
-        $category = Category::create(['name'  => 'test1', 'is_active'  => true]);
+        $category = Category::query()->create(['name'  => 'test1', 'is_active'  => true]);
         $this->assertTrue($category->is_active);
 
         try {
-            Category::create(['name'  => null, 'is_active'  => true]);
+            Category::query()->create(['name'  => null, 'is_active'  => true]);
         }catch (QueryException $queryException) {
             $this->assertTrue(strpos($queryException->getMessage(), 'Column \'name\' cannot be null') !== false);
         }

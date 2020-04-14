@@ -4,13 +4,12 @@ namespace Tests\Feature\Http\Controllers\Api;
 
 use App\Models\Category;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\TestResponse;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Tests\Traits\TestValidations;
 
 class CategoryControllerTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase, TestValidations;
 
     public function testIndex()
     {
@@ -34,29 +33,21 @@ class CategoryControllerTest extends TestCase
 
     public function testInvalidationData()
     {
-        $response = $this->postJson(route('categories.store'), []);
+        $response = $this->postJson(route('categories.store'));
         $this->assertInvalidationRequired($response);
 
-        $response =  $this->postJson(route('categories.store'), [
-            'name' => str_repeat('a', 256),
-            'is_active' => 'a'
-        ]);
+        $data = ['name' => str_repeat('a', 256), 'is_active' => 'a'];
+
+        $response =  $this->postJson(route('categories.store'), $data);
         $this->assertInvalidationMax($response);
         $this->assertInvalidationBolean($response);
 
-        /** @var Category $category */
         $category = factory(Category::class)->create();
-        $response =  $this->putJson(route('categories.update', [
-            'category'  =>  $category->getAttribute('id')
-        ]), []);
+
+        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]));
         $this->assertInvalidationRequired($response);
 
-        $response =  $this->putJson(route('categories.update', [
-            'category'  =>  $category->getAttribute('id')
-        ]), [
-            'name' => str_repeat('a', 256),
-            'is_active' => 'a'
-        ]);
+        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]), $data);
         $this->assertInvalidationMax($response);
         $this->assertInvalidationBolean($response);
     }
@@ -134,34 +125,15 @@ class CategoryControllerTest extends TestCase
             ]);
     }
 
-    private function assertInvalidationRequired(TestResponse $response) : void
+    public function testDestroy()
     {
-        $response
-            ->assertStatus(422)
-            ->assertJsonValidationErrors(['name'])
-            ->assertJsonMissingValidationErrors(['is_active'])
-            ->assertJsonFragment([
-                \Lang::get('validation.required', ['attribute' => 'name'])
-            ]);
-    }
-
-    private function assertInvalidationMax(TestResponse $response) : void
-    {
-        $response
-            ->assertStatus(422)
-            ->assertJsonValidationErrors(['name'])
-            ->assertJsonFragment([
-                \Lang::get('validation.max.string', ['attribute' => 'name', 'max' => 255])
-            ]);
-    }
-
-    private function assertInvalidationBolean(TestResponse $response) : void
-    {
-        $response
-            ->assertStatus(422)
-            ->assertJsonValidationErrors(['name', 'is_active'])
-            ->assertJsonFragment([
-                \Lang::get('validation.boolean', ['attribute' => 'is active'])
-            ]);
+        $category = factory(Category::class)->create();
+        $response = $this->deleteJson(route(
+            'categories.destroy',
+            ['category' => $category->getAttribute('id')]
+        ));
+        $response->assertStatus(204);
+        $this->assertSoftDeleted('categories'); // test if table is softDeleted
+        $this->assertSoftDeleted('categories', $category->toArray()); // test if obect is softDeleted (I think....)
     }
 }
