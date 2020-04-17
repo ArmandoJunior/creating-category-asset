@@ -30,7 +30,7 @@ trait TestValidations
         array   $ruleParams = [])
     {
         $response
-            ->assertStatus(500)
+            ->assertStatus(422)
             ->assertJsonValidationErrors($fields);
 
         foreach ($fields as $field)  {
