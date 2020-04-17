@@ -31,27 +31,6 @@ class CategoryControllerTest extends TestCase
             ->assertJson([$category->toArray()]);
     }
 
-    public function testInvalidationData()
-    {
-        $response = $this->postJson(route('categories.store'));
-        $this->assertInvalidationRequired($response);
-
-        $data = ['name' => str_repeat('a', 256), 'is_active' => 'a'];
-
-        $response =  $this->postJson(route('categories.store'), $data);
-        $this->assertInvalidationMax($response);
-        $this->assertInvalidationBolean($response);
-
-        $category = factory(Category::class)->create();
-
-        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]));
-        $this->assertInvalidationRequired($response);
-
-        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]), $data);
-        $this->assertInvalidationMax($response);
-        $this->assertInvalidationBolean($response);
-    }
-
     public function testStore()
     {
         $response =  $this->postJson(route('categories.store'), [
@@ -136,4 +115,26 @@ class CategoryControllerTest extends TestCase
         $this->assertSoftDeleted('categories'); // test if table is softDeleted
         $this->assertSoftDeleted('categories', $category->toArray()); // test if obect is softDeleted (I think....)
     }
+
+    public function testInvalidationData()
+    {
+        $response = $this->postJson(route('categories.store'));
+        $this->assertInvalidationRequired($response);
+
+        $data = ['name' => str_repeat('a', 256), 'is_active' => 'a'];
+
+        $response =  $this->postJson(route('categories.store'), $data);
+        $this->assertInvalidationMax($response);
+        $this->assertInvalidationBolean($response);
+
+        $category = factory(Category::class)->create();
+
+        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]));
+        $this->assertInvalidationRequired($response);
+
+        $response =  $this->putJson(route('categories.update', ['category'  =>  $category->id]), $data);
+        $this->assertInvalidationMax($response);
+        $this->assertInvalidationBolean($response);
+    }
+
 }
