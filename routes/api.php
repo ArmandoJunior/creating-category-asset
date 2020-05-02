@@ -22,4 +22,5 @@ Route::group(['namespace' => 'Api'], function() {
     $except = ['except' => ['create', 'edit']];
     Route::resource('categories', 'CategoryController', $except);
     Route::resource('genres', 'GenreController', $except);
+    Route::resource('cast_members', 'CastMemberController', $except);
 });
