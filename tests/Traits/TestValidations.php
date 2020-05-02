@@ -4,12 +4,18 @@ declare(strict_types=1);
 namespace Tests\Traits;
 
 use Illuminate\Foundation\Testing\TestResponse;
+use Lang;
 
 trait TestValidations
 {
+    protected abstract function model();
+    protected abstract function routeStore();
+    protected abstract function routeUpdate();
+    protected abstract function fieldsRequired();
+
     protected function assertInvalidationRequired(TestResponse $response) : void
     {
-        $this->assertInvalidationFields($response, ['name'], 'required');
+        $this->assertInvalidationFields($response, $this->fieldsRequired(), 'required');
         $response->assertJsonMissingValidationErrors(['is_active']);
     }
 
@@ -29,14 +35,12 @@ trait TestValidations
         string  $rule,
         array   $ruleParams = [])
     {
-        $response
-            ->assertStatus(422)
-            ->assertJsonValidationErrors($fields);
+        $response->assertStatus(422)->assertJsonValidationErrors($fields);
 
         foreach ($fields as $field)  {
             $fieldName = str_replace('_', ' ', $field);
             $response->assertJsonFragment([
-                \Lang::get("validation.{$rule}", ['attribute' => $fieldName] + $ruleParams)
+                Lang::get("validation.{$rule}", ['attribute' => $fieldName] + $ruleParams)
             ]);
         }
     }
